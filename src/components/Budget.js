@@ -7,9 +7,10 @@ const Budget = () => {
     const handleBudgetChange = (event) => {
         setNewBudget(event.target.value);
     }
+    const { currency } = useContext(AppContext);
     return (
 <div className='alert alert-secondary'>
-<span>Budget: £</span>
+<span>Budget: { currency }</span>
 <input type="number" step="10" value={newBudget} onChange={handleBudgetChange}></input>
 </div>
     );
